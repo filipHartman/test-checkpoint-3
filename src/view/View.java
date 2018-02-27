@@ -2,6 +2,7 @@ package view;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class View {
     public static ArrayList<String> menu = new ArrayList<>(
@@ -20,8 +21,11 @@ public class View {
             System.out.println(counter++ + ". " + option);
         }
         System.out.println("0. Exit");
-
-
+    }
+    public String getUserInput(String msg){
+        System.out.print(msg);
+        Scanner sc = new Scanner(System.in);
+        return sc.nextLine();
     }
 
 }
